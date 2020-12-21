@@ -1,6 +1,6 @@
 # Hubitat Onkyo Multi-Zone AVR Driver
 
-This driver controls Onkyo network audio video receivers using the Onkyo eISCP protocal over Hubitat's telnet interface. The driver supports up to 4 zones (Main and Zones 2-4) by creating a separate child device for each selected zone.  Please note that only Onkyo 'Network Receiver' models are supported.  If your receiver have an Ethernet port on the rear panel odds are pretty good it'll work with this driver.
+This driver controls Onkyo network audio video receivers using the Onkyo eISCP protocol over Hubitat's telnet interface. The driver supports up to 4 zones (Main and Zones 2-4) by creating a separate child device for each selected zone.  Please note that only Onkyo 'Network Receiver' models are supported.  If your receiver has an Ethernet port on the rear panel odds are pretty good it'll work with this driver.
 <br>
 <br>
 
@@ -75,8 +75,8 @@ For each installed child/zone, the driver supports the following functions:
 * Zone Muting: Muted/Unmuted
 * Input Source: selection by index number
 * Input Source Naming: allows attaching a name to the input index
-* Input Source: by raw 2 character hex value (see Onkyo eISCP Protocol document for model specific input code values)
-* The ability to send a raw eISCP command which should allow you additional control above the core functions listed above (see the Onkyo eISCP Protocal Documents in the Docs folder for this driver for addtional information regarding available commands)
+* Input Source: by raw 2 character hex value (see Onkyo eISCP Protocol document for model-specific input code values)
+* The ability to send a raw eISCP command which should allow you additional control above the core functions listed above (see the Onkyo eISCP Protocol Documents in the Docs folder for this driver for additional information regarding available commands)
 <br>
 <br>
 
