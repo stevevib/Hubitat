@@ -5,14 +5,15 @@ This driver controls Onkyo network audio video receivers using the Onkyo eISCP p
 <br>
 
 ## Versions
-___
+<br>
+
 * v0.20.1214.1      (12/14/20): Initial beta release
 <br>
 <br>
 
 ## Installation Instructions
-___
 <br>
+
 
 **Add this Parent Device Driver to Your Hubitat Elevation Hub**
 
@@ -63,7 +64,8 @@ ___
 <br>
 
 ## Notes
-___
+<br>
+
 While this driver will allow you to add up to 4 different child zones (Main, and zones 2 - 4), the capabilities of your specific Onkyo AVR will determine how many physical zones can be controlled.  
 
 For each installed child/zone, the driver supports the following functions:
@@ -83,8 +85,12 @@ Onkyo periodically publishes eISCP Protocol documents that includes command code
 <br>
 <br>
 
-Some receivers may not respond to commands as expected.  I own two Onkyo AVRs; a TX-NR3010 purchased in 2013 and a TX-NR777 purchased in 2017.  The 3010 refuses to respond to volume commands for Zone 2 and returns *ZVLN/A* when any attempt is made to change the volume setting using either a specific volume level or the volume up/down commands.  While this could certainly be related to issues with this driver, the 777 works as expected and other methods I have tried to control the 3010's volume (including Node-RED with the 
-node-red-contrib-eiscp node) result in the same *ZVLN/A* response.
+Some receivers may not respond to commands as expected.  I own two Onkyo AVRs; a TX-NR3010 purchased in 2013 and a TX-NR777 purchased in 2017.  The 3010 refuses to respond to volume commands for Zone 2 and returns *ZVLN/A* when any attempt is made to change the volume setting using either a specific volume level or the volume up/down commands. 
+
+While this could certainly be related to issues with this driver, the 777 works as expected and other methods I have tried to control the 3010's volume (including Node-RED with the 
+node-red-contrib-eiscp node) result in the same *ZVLN/A* response. 
+
+Unfortunately, the TX-NR3010 has been out of production for a number of years and it's unlikely that Onkyo will be releasing additional firmware updates that might fix this issue.  Hopefully, this problem is isolated to the 3010 (or is something specific to my 3010 only) and not a widespread issue with other models of that vintage. 
 <br>
 <br>
 
@@ -93,11 +99,3 @@ ___
 <br>
 Donations are never required but always appreciated. If you feel so inclined, you can help fuel my addiction gadgets, gizmos, good coffee and good beer (and occasionally, coffee flavored beer but <b>never</b> beer flavored coffee!) by visiting: 
 https://www.paypal.com/donate?hosted_button_id=QQFKFQZWNM8SG
-
-<br>
-
-<form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="QQFKFQZWNM8SG" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>

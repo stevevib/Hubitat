@@ -25,7 +25,7 @@
 
     Date            Version             By                  Changes
     --------------------------------------------------------------------------------
-    2020-12-14      0.9.201214.0        Steve Vibert        Initial Beta Release
+    2020-12-14      0.9.201214.1        Steve Vibert        Initial Beta Release
 
 
     WARNING!
