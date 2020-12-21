@@ -7,7 +7,7 @@ This driver controls Onkyo network audio video receivers using the Onkyo eISCP p
 ## Versions
 <br>
 
-* v0.20.1214.1      (12/14/20): Initial beta release
+* v0.9.201214.1      (12/14/20): Initial beta release
 <br>
 <br>
 
