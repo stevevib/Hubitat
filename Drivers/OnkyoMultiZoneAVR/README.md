@@ -72,7 +72,7 @@ For each installed child/zone, the driver supports the following functions:
 
 * Zone Power: On/Off
 * Zone Volume Level
-* Zone Muting: Muted/Unmuted
+* Zone Muting: Muted/Unmuted/Toggle
 * Input Source: selection by index number
 * Input Source Naming: allows attaching a name to the input index
 * Input Source: by raw 2 character hex value (see Onkyo eISCP Protocol document for model-specific input code values)
@@ -81,7 +81,9 @@ For each installed child/zone, the driver supports the following functions:
 <br>
 
 
-Onkyo periodically publishes eISCP Protocol documents that includes command codes and associated valid value ranges for the receivers in production at the time the protocal document was published. While the basic commands have generally remained the same over multiple product generations, commands that accept a range of values such as volume level and input source can vary siginificantly from model to model. The protocal documents can be used to determine which commands and values are supported by your specific AVR model.
+Onkyo periodically publishes eISCP Protocol documents that includes command codes and associated valid value ranges for the receivers in production at the time the protocal document was published. While the basic commands have generally remained the same over multiple product generations, commands that accept a range of values such as volume level and input source can vary siginificantly from model to model. The protocal documents can be used to determine which commands and values are supported by your specific AVR model. 
+
+A number of Onkyo ISCP Protocol documents are available here: https://github.com/stevevib/Hubitat/tree/main/Drivers/OnkyoMultiZoneAVR/Docs. 
 <br>
 <br>
 
