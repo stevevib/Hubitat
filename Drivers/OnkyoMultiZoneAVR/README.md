@@ -87,17 +87,18 @@ A number of Onkyo ISCP Protocol documents are available here: https://github.com
 <br>
 <br>
 
-Some receivers may not respond to commands as expected.  I own two Onkyo AVRs; a TX-NR3010 purchased in 2013 and a TX-NR777 purchased in 2017.  The 3010 refuses to respond to volume commands for Zone 2 and returns *ZVLN/A* when any attempt is made to change the volume setting using either a specific volume level or the volume up/down commands. 
+~~Some receivers may not respond to commands as expected.  I own two Onkyo AVRs; a TX-NR3010 purchased in 2013 and a TX-NR777 purchased in 2017.  The 3010 refuses to respond to volume commands for Zone 2 and returns *ZVLN/A* when any attempt is made to change the volume setting using either a specific volume level or the volume up/down commands.~~ 
 
-While this could certainly be related to issues with this driver, the 777 works as expected and other methods I have tried to control the 3010's volume (including Node-RED with the 
-node-red-contrib-eiscp node) result in the same *ZVLN/A* response. 
+~~While this could certainly be related to issues with this driver, the 777 works as expected and other methods I have tried to control the 3010's volume (including Node-RED with the 
+node-red-contrib-eiscp node) result in the same *ZVLN/A* response.~~ 
 
-Unfortunately, the TX-NR3010 has been out of production for a number of years and it's unlikely that Onkyo will be releasing additional firmware updates that might fix this issue.  Hopefully, this problem is isolated to the 3010 (or is something specific to my 3010 only) and not a widespread issue with other models of that vintage. 
+~~Unfortunately, the TX-NR3010 has been out of production for a number of years and it's unlikely that Onkyo will be releasing additional firmware updates that might fix this issue.  Hopefully, this problem is isolated to the 3010 (or is something specific to my 3010 only) and not a widespread issue with other models of that vintage.~~
+To avoid the problem above, make sure your zone 2 (3, or 4) settings are properly configurred.  In the case of the TX-NR3010 the zone settings are on the speaker configuration page. At some point I must have changed the config and inadvertantly re-enabled the 9 channel setting which disabled the zone 2 speakers.   
 <br>
 <br>
 
 ___
 <br>
 <br>
-Donations are never required but always appreciated. If you feel so inclined, you can help fuel my addiction gadgets, gizmos, good coffee and good beer (and occasionally, coffee flavored beer but <b>never</b> beer flavored coffee!) by visiting: 
+Donations, while never required are  always appreciated. If you feel so inclined, you can help fuel my addiction gadgets, gizmos, good coffee and good beer (and occasionally, coffee flavored beer but <b>never</b> beer flavored coffee!) by visiting: 
 https://www.paypal.com/donate?hosted_button_id=QQFKFQZWNM8SG
