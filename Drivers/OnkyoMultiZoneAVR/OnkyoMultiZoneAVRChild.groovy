@@ -26,6 +26,7 @@
     Date            Version             By                  Changes
     --------------------------------------------------------------------------------
     2020-12-14      0.9.201214.1        Steve Vibert        Initial Beta Release
+    2021-03-20      0.9.210320.1        Steve Vibert        Fix: text logging settings being ignored
 
 
     WARNING!
@@ -66,7 +67,7 @@ metadata
 
 	preferences 
 	{   
-		input name: "textLogging ",  type: "bool", title: "Enable description text logging ", required: true, defaultValue: true
+		input name: "textLogging",  type: "bool", title: "Enable description text logging ", required: true, defaultValue: true
         input name: "debugOutput", type: "bool", title: "Enable debug logging", defaultValue: true
     }
 }

@@ -26,6 +26,7 @@
     Date            Version             By                  Changes
     --------------------------------------------------------------------------------
     2020-12-14      0.9.201214.1        Steve Vibert        Initial Beta Release
+    2021-03-20      0.9.210320.1        Steve Vibert        Fix: text logging settings being ignored
 
 
     WARNING!
@@ -58,7 +59,7 @@ metadata
 		input name: "eISCPTermination", type: "enum", options: [[1:"CR"],[2:"LF"],[3:"CRLF"],[4:"EOF"]] ,title: "EISCP Termination Option", required: true, displayDuringSetup: true, description: "Most receivers should work with CR termination"
 		input name: "eISCPVolumeRange", type: "enum", options: [[50:"0-50 (0x00-0x32)"],[80:"0-80 (0x00-0x50)"],[100:"0-100 (0x00-0x64)"],[200:"0-100 Half Step (0x00-0xC8)"]],defaultValue:80, title: "Supported Volume Range", required: true, displayDuringSetup: true, description:"(see Onkyo EISCP Protocol doc for model specific values)"
         input name: "enabledReceiverZones", type: "enum", title: "Enabled Zones", required: true, multiple: true, options: [[1: "Main"],[2:"Zone 2"],[3:"Zone 3"],[4: "Zone 4"]]
- 		input name: "textLogging ",  type: "bool", title: "Enable description text logging ", required: true, defaultValue: true
+ 		input name: "textLogging",  type: "bool", title: "Enable description text logging ", required: true, defaultValue: true
         input name: "debugOutput", type: "bool", title: "Enable debug logging", defaultValue: true
     }
 }
@@ -182,6 +183,8 @@ def updated()
 		runIn(1800,logsOff)
 
     updateChildren()
+    //device.updateSetting("enabledReceiverZones",[value:"false",type:"enum"])	
+
     initialize()
 }
 
