@@ -7,9 +7,16 @@ This driver controls Onkyo network audio video receivers using the Onkyo eISCP p
 ## Versions
 <br>
 
-* v0.9.201214.1      (12/14/20): Initial beta release
+* v0.9.201214.1  (12/14/20):
+Initial beta release
 <br>
 <br>
+* v0.9.210320.1  (3/20/21):  
+OnkyoMultiZoneAVRParent.groovy and OnkyoMultiZoneAVRChild.groovy: Text logging settings being ignored 
+<br><br>
+* v0.9.210324.0   (3/24/21):  
+OnkyoMultiZoneAVRChild.groovy: Lower case or single digit volume level command values cause ZZZN/A response (where ZZZ represents the zone command prefix)
+<br><br>
 
 ## Installation Instructions
 <br>
@@ -93,6 +100,7 @@ A number of Onkyo ISCP Protocol documents are available here: https://github.com
 node-red-contrib-eiscp node) result in the same *ZVLN/A* response.~~ 
 
 ~~Unfortunately, the TX-NR3010 has been out of production for a number of years and it's unlikely that Onkyo will be releasing additional firmware updates that might fix this issue.  Hopefully, this problem is isolated to the 3010 (or is something specific to my 3010 only) and not a widespread issue with other models of that vintage.~~
+
 To avoid the problem above, make sure your zone 2 (3, or 4) settings are properly configurred.  In the case of the TX-NR3010 the zone settings are on the speaker configuration page. At some point I must have changed the config and inadvertantly re-enabled the 9 channel setting which disabled the zone 2 speakers.   
 <br>
 <br>
@@ -100,5 +108,6 @@ To avoid the problem above, make sure your zone 2 (3, or 4) settings are properl
 ___
 <br>
 <br>
-Donations, while never required are  always appreciated. If you feel so inclined, you can help fuel my addiction gadgets, gizmos, good coffee and good beer (and occasionally, coffee flavored beer but <b>never</b> beer flavored coffee!) by visiting: 
+Donations, while never required are always appreciated. If you feel so inclined, you can help fuel my addiction gadgets, gizmos, good coffee and good beer (and occasionally, coffee flavored beer but <b>never</b> beer flavored coffee!) by visiting: 
 https://www.paypal.com/donate?hosted_button_id=QQFKFQZWNM8SG
+
