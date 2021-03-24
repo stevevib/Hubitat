@@ -10,13 +10,15 @@ This driver controls Onkyo network audio video receivers using the Onkyo eISCP p
 * v0.9.201214.1  (12/14/20):
 Initial beta release
 <br>
-<br>
+
 * v0.9.210320.1  (3/20/21):  
 OnkyoMultiZoneAVRParent.groovy and OnkyoMultiZoneAVRChild.groovy: Text logging settings being ignored 
-<br><br>
+<br>
+
 * v0.9.210324.0   (3/24/21):  
 OnkyoMultiZoneAVRChild.groovy: Lower case or single digit volume level command values cause ZZZN/A response (where ZZZ represents the zone command prefix)
-<br><br>
+<br>
+<br>
 
 ## Installation Instructions
 <br>
