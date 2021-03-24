@@ -27,7 +27,7 @@
     --------------------------------------------------------------------------------
     2020-12-14      0.9.201214.1        Steve Vibert        Initial Beta Release
     2021-03-20      0.9.210320.1        Steve Vibert        Fix: text logging settings being ignored
-
+    2021-03-24      0.9.210324.0        Steve Vibert        Fix: Lower case or single digit volume level command values cause ZZZN/A response (where ZZZ represents the zone command prefix)
 
     WARNING!
         In addition to controlling basic receiver functionality, this driver also includes 
@@ -107,7 +107,7 @@ metadata
 
 def getVersion()
 {
-    return "0.9.210320.1"
+    return "0.9.210324.0"
 }
 
 void parse(String description) 
@@ -280,6 +280,17 @@ def setVolume(val)
 	Float fNewVolumeVal = (Float)maxEiscpVolume * (Float)val / 100.0
 	Integer newVolumeVal = (Integer)fNewVolumeVal
 	String hexVal = Integer.toHexString(newVolumeVal)
+
+    // Some Onkyo models respond with ZZZN/A if the value porion of the volume command
+    // isn't two characters long and/or includes lowercase values...
+
+    // Make sure the value is two characters long...
+    if(hexVal.length() == 1)
+        hexVal = "0${hexVal}"
+
+    // ...and all uppercase...
+    hexVal = hexVal.toUpperCase()
+
     writeLogDebug ("newVolumeVal: ${newVolumeVal} = ${hexVal} hex")
     
     String cmdPrefix = getCommand(VolumeSet)
